@@ -36,6 +36,7 @@ function reviewFlashcards() {
         askForChoice();
     } else {
         const currentBox = leitnerBoxes.find(box => box.length > 0);
+        // Get the first flashcard in the current box
         const flashcard = currentBox.shift();
         console.log('Question:', flashcard.question);
         rl.question('Press Enter to reveal the answer...', () => {
